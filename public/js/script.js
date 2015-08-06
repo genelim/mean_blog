@@ -18,6 +18,10 @@ angular.module('personal',['ngRoute'])
         $('.sub-menu').toggle( "fast" );
     });
 })
-.controller('BlogCtrl', function($scope){
-	$scope.posts = [{title:'Hello',date:'June 12,2015',border_color:'#2C3E50'},{title:'Mean',date:'August 02,2015',border_color:'#3498DB'},{title:'Bug',date:'August 27,2015',border_color:'#E74C3C'}];
+.controller('BlogCtrl', function($scope, $http){
+	$http.get('/blog')
+	.success(function(data) {
+		$scope.posts = data;
+	});
+
 });
