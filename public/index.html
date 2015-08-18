@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Page Title</title>
+		<title>Gene Lim</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js?ver=2.1.0"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 		<script src="js/script.js"></script>
-
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-sanitize.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.js"></script>
 	</head>
 	<body ng-app="personal">
-	<div ng-view></div>
+		<div class="container banner" ng-controller="NavCtrl">
+			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+				<a class="logo_pad" href="#/"><img src="/img/logo.png" class="img-responsive img-nav"></a>
+			</div>
+			<div class="col-lg-10 col-md-10 menu_large">
+				<ul>
+					<li>
+						<a href="#/work">Work</a>
+					</li>
+					<li>
+						<a href="#/blog">Blog</a>
+					</li>
+					<li class="resume">
+						<a href="/file/resume.pdf" download><span class="glyphicon glyphicon-download" aria-hidden="true"></span> &nbsp; Resume</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-8 col-xs-8">
+				<a class="hamburger">☰</a>
+			</div>
+			<div class="sub-menu">
+				<ul>
+					<li>
+						<a href="#/work">Work</a>
+					</li>
+					<li>
+						<a href="#/blog">Blog</a>
+					</li>
+					<li class="resume">
+						<a  href="/file/resume.pdf" download><span class="glyphicon glyphicon-download" aria-hidden="true"></span> &nbsp; Resume</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div ng-view></div>
 		
 	</body>
 </html>

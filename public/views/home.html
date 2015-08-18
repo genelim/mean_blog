@@ -1,50 +1,4 @@
-<div class="container banner" ng-controller="NavCtrl">
-	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-		<a class="logo_pad" href="/#"><img src="/img/logo.png" class="img-responsive img-nav"></a>
-	</div>
-	<div class="col-lg-10 col-md-10 menu_large">
-		<ul>
-			<li>
-				<a href="">About Me</a>
-			</li>
-			<li>
-				<a href="">Works</a>
-			</li>
-			<li>
-				<a href="#/blog">Blog</a>
-			</li>
-			<li>
-				<a href="">Contact</a>
-			</li>
-			<li class="resume">
-				<a href=""><span class="glyphicon glyphicon-download" aria-hidden="true"></span> &nbsp; Resume</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-sm-8 col-xs-8">
-		<a class="hamburger">☰</a>
-	</div>
-	<div class="sub-menu">
-		<ul>
-			<li>
-				<a href="#about">About Me</a>
-			</li>
-			<li>
-				<a href="">Works</a>
-			</li>
-			<li>
-				<a href="">Blog</a>
-			</li>
-			<li>
-				<a href="">Contact</a>
-			</li>
-			<li class="resume">
-				<a href=""><span class="glyphicon glyphicon-download" aria-hidden="true"></span> &nbsp; Resume</a>
-			</li>
-		</ul>
-	</div>
-</div>
-<div class="background" ng-controller="MainCtrl">
+<div class="background">
 	<div class="container">
 		<div class="hero">
 			<h1>
@@ -60,8 +14,58 @@
 </div>
 <div id="about">
 	<div class="container">
-		<div class="hero">
-			Hello
+		<div class="col-lg-3">
+			<img class="img-responsive" src="/img/logo.png"/>
 		</div>
+		<div class="col-lg-9">
+			<div class="attraction_tag">
+				<span>
+					You should always <strong>follow</strong> what your heart <strong>dictates</strong> and <strong>do</strong> whatever makes you happy.
+				</span>
+			</div>
+		</div>
+		<div class="col-lg-3 ">
+            <h2 class="title">Getting To Know Me</h2>
+        </div>
+        <div class="col-lg-9">
+            <div class="text">
+                Born in Malaysia. A person with <strong>high inclination</strong> in Information and Technologies.An <strong>experienced</strong> web developer, consultant, designer and UI UX specialist. Loves to create websites based on <strong>creative imagination</strong> and on client’s <strong>desire</strong>. Takes challenges as a motivation to keep moving forward. Accepts constructive criticisms and use it for <strong>improvement</strong>. 
+            </div>
+        </div>
 	</div>
+</div>
+<div id="skill">
+	<div class="container">
+		<h2 class="col-lg-12">Skills</h2>
+	    <div class="skill_type row">	
+			<h4 class="col-lg-12">ADVANCE</h4>
+			<div class="col-lg-2 card" ng-repeat="skill in skills_advance">
+				<img Src="/img/logo/{{skill.type}}.png" class="img-responsive">
+		        <div class="words">
+		        	<h5>{{skill.type}}</h5>
+		        </div>
+		    </div>
+	    </div>
+	    <div class="skill_type row">
+		    <h4 class="col-lg-12">EXPERIENCED</h4>
+			<div class="col-lg-2 card" ng-repeat="skill in skills_experienced">
+				<img Src="/img/logo/{{skill.type}}.png" class="img-responsive">
+		        <div class="words">
+		        	<h5>{{skill.type}}</h5>
+		        </div>
+		    </div>
+	    </div>
+    </div>
+</div>
+<div id="contact">
+	<div class="container">
+		<h2 class="col-lg-6">Let's Get In Touch</h2>
+		<h2 class="col-lg-6 message"></h2>
+		<form>
+			<p><input type="text" ng-model="contacts.names" placeholder="Name"></p>
+	        <p><input type="email" ng-model="contacts.email" placeholder="Email"></p>
+	        <p><textarea ng-model="contacts.message" placeholder="Message"></textarea></p>
+	        <p><input type="submit" ng-click="contact(contacts)" value="Send"></p>
+        </form>
+    </div>
 </div>

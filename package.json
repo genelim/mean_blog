@@ -12,5 +12,8 @@
     "resume"
   ],
   "author": "Gene Lim",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xoauth2": "^1.1.0"
+  }
 }
